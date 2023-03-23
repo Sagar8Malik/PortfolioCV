@@ -1,0 +1,318 @@
+.project-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-color);
+  padding: 20px;
+  margin-bottom: 50px;
+}
+.project-container .title {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  height: 20%;
+  width: 100%;
+  align-items: center;
+}
+.project-container .title .title1 {
+  color: var(--text-color);
+  font-size: 55px;
+}
+.project-container .title .title2 {
+  color: var(--highlighter);
+  font-size: 55px;
+}
+
+.project-container .card-container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 50px;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-container .card-container .card {
+  /* margin: 45px 0; */
+  position: relative;
+  width: 350px;
+  height: 220px;
+  background-color: transparent;
+  transition: 0.5s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  overflow: hidden;
+}
+.project-container .card-container .card .imgBox {
+  width: calc(100% - 5px);
+  height: calc(100% - 5px);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1000;
+  /* border-radius: 15px; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.project-container .card-container .card .imgBox .transparency {
+  width: 100%;
+  height: 100%;
+  /* border-radius: 15px; */
+  background-color: rgba(36, 34, 34, 0.249);
+}
+.project-container .card-container .card .lines {
+  inset: 0;
+  position: absolute;
+  background-color: black;
+  overflow: hidden;
+  /* border-radius: 15px; */
+}
+.project-container .card-container .card .lines::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background: linear-gradient(
+    transparent,
+    var(--text-color),
+    var(--text-color),
+    var(--text-color),
+    transparent
+  );
+  height: 200px;
+  width: 700px;
+  transform: translate(-50%, -50%);
+  animation: animate 4s linear infinite;
+}
+@keyframes animate {
+  0% {
+    transform: translate(-50%, -50%) rotate(90deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(450deg);
+  }
+}
+
+.project-container .card-container .card .lines::after {
+  content: '';
+  position: absolute;
+  inset: 1px;
+  background-color: #333;
+  /* border-radius: 15px; */
+}
+.project-container .card-container .card .content {
+  position: absolute;
+  color: #333;
+  z-index: 2000;
+  background-color: rgba(220, 204, 204, 0.607);
+  width: calc(100%);
+  height: calc(100%);
+  /* border-radius: 15px; */
+  top: -100%;
+  transition: 1s;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.project-container .card-container .card:hover .content {
+  top: 0%;
+}
+.project-container .card-container .card .content .button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  background-color: rgb(200, 186, 186);
+  padding: 0.5rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.5s;
+  color: #333;
+}
+.project-container .card-container .card .content .button:hover,
+.project-container .card-container .card .content .button2:hover {
+  gap: 2rem;
+}
+.project-container .card-container .card .content .button .button-icon,
+.project-container .card-container .card .content .button2 .button-icon {
+  font-size: 18px;
+}
+.project-container .card-container .card .content .button2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  background-color: #171515;
+  color: #fff;
+  padding: 0.5rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.project-container .card-container .card .content .time {
+  background-color: rgb(36, 33, 33);
+  font-size: 15px;
+  padding: 5px;
+  border-radius: 25px;
+  border: 2px solid #fff;
+  color: #fff;
+}
+/* 
+.project-container .card-container .card .imgBox {
+  position: absolute;
+  z-index: 1;
+  height: 200px;
+  width: 350px;
+  top: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: 0.5s;
+  overflow: hidden;
+  border-radius: 15px;
+  background-color: black;
+}
+
+.project-container .card-container .card .imgBox img {
+  position: relative;
+  z-index: 10;
+  width: calc(100% - 20px);
+  height: calc(100% - 20px);
+  top: 10px;
+  left: 10px;
+  border-radius: 10px;
+}
+
+.project-container .card-container .card:hover .imgBox {
+  width: 250px;
+} */
+/*
+.project-container .card-container .card .content {
+  position: absolute;
+  top: 160px;
+  width: 80%;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.project-container .card-container .card .content .title {
+  align-items: baseline;
+  overflow: scroll;
+  font-size: 20px;
+  width: 100%;
+  height: 35px;
+}
+
+.project-container .card-container .card:hover .content .title {
+  font-size: 25px;
+  height: 70px;
+}
+
+.project-container .card-container .card .content .time {
+  background-color: rgb(36, 33, 33);
+  font-size: 15px;
+  padding: 5px;
+  border-radius: 25px;
+  border: 2px solid red;
+}
+.project-container .card-container .card:hover .content .time {
+  opacity: 0;
+  display: none;
+}
+.project-container .card-container .card .content .tech-title {
+  color: var(--highlighter);
+}
+
+.project-container .card-container .card .content .tech-container {
+  overflow: scroll;
+  height: 181px;
+  font-size: 20px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5px;
+  padding-top: 10px;
+}
+
+.project-container .card-container .card .content .tech-container .grid {
+  height: 35px;
+}
+.project-container .card-container .card .content .button {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 11px;
+  color: var(--text-color);
+  background-color: var(--highlighter);
+  border-radius: 33px;
+  width: max-content;
+  transition: 1s;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.project-container .card-container .card .content .button:hover {
+  gap: 35px;
+}
+.project-container .card-container .card .content .button .button-icon {
+  font-size: 30px;
+}
+.project-container .card-container .card .content .tech-title,
+.project-container .card-container .card .content .discription,
+.project-container .card-container .card .content .button,
+.project-container .card-container .card .content .tech,
+.project-container .card-container .card .content .tech-container {
+  opacity: 0;
+  visibility: hidden;
+  top: -220px;
+  transition: 0.8s;
+  position: absolute;
+}
+.project-container .card-container .card:hover .content .tech-title,
+.project-container .card-container .card:hover .content .button,
+.project-container .card-container .card:hover .content .discription,
+.project-container .card-container .card:hover .content .tech,
+.project-container .card-container .card:hover .content .tech-container {
+  opacity: 1;
+  visibility: visible;
+  position: relative;
+  top: 0;
+}
+@media (max-width: 850px) {
+  .project-container .title {
+    gap: 10px;
+  }
+  .project-container .title .title1 {
+    color: var(--text-color);
+    font-size: 30px;
+  }
+  .project-container .title .title2 {
+    color: var(--highlighter);
+    font-size: 30px;
+  }
+  .project-container .card-container {
+    flex-direction: column;
+    padding: 20px;
+  }
+  .project-container .card-container .card {
+    width: 100%;
+  }
+  .project-container .card-container .card .imgBox {
+    width: 250px;
+  }
+} */

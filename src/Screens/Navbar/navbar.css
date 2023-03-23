@@ -1,0 +1,39 @@
+.navbar {
+  display: flex;
+  height: 10vh;
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+  align-items: flex-end;
+  justify-content: space-between;
+  z-index: 200000;
+}
+
+.navbar .btn {
+  color: var(--text-color);
+  transition: 1s;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  height: 75%;
+  gap: 10px;
+  justify-content: center;
+  background-color: transparent;
+  background-color: var(--bg-color);
+  width: 100%;
+}
+.navbar .btn .nav-icon {
+  font-size: 20px;
+  color: var(--highlighter);
+}
+
+.navbar .btn:hover {
+  color: var(--highlighter);
+  height: 100%;
+  background-color: var(--text-color);
+}
+@media (max-width: 500px) {
+  .navbar .btn .nav-icon {
+    display: none;
+  }
+}

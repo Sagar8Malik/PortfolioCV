@@ -1,0 +1,218 @@
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-color);
+  padding: 20px;
+}
+.contact-container .title {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  height: 20%;
+  width: 100%;
+  align-items: center;
+}
+.contact-container .title .title1 {
+  color: var(--text-color);
+  font-size: 55px;
+}
+.contact-container .title .title2 {
+  color: var(--highlighter);
+  font-size: 55px;
+}
+.contact-container .contact-frame {
+  width: 100%;
+  flex-basis: 100%;
+  display: flex;
+  flex-direction: row;
+  padding: 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+}
+.contact-container .contact-frame .frame {
+  margin-left: 20px;
+  position: relative;
+  height: 250px;
+  aspect-ratio: 1;
+  background-image: url('../../tryImage/f5d5dabd-5522-40ad-8b32-e9108aa63d3b.webp');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: rgb(237, 233, 227);
+  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+}
+.contact-container .contact-frame .contact-info {
+  position: relative;
+  width: 100%;
+  display: flex;
+  color: white;
+  gap: 20px;
+}
+.contact-container .contact-frame .contact-info .col1 {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  color: var(--text-color);
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.contact-container .contact-frame .contact-info .col1 .row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.contact-container .contact-frame .contact-info .col1 .row .icon {
+  color: var(--highlighter);
+  font-size: 24px;
+  background-color: var(--text-color);
+  width: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 35px;
+  border-radius: 50%;
+}
+.contact-container .contact-frame .contact-info .col1 .row .info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.contact-container .contact-frame .contact-info .col1 .row .info .key {
+  color: var(--text-key);
+}
+.contact-container .contact-frame .contact-info .col2 {
+  display: grid;
+  width: 10%;
+  grid-template-columns: 1fr;
+  height: 100%;
+  gap: 30px;
+  font-size: 30px;
+}
+.contact-container .contact-frame .contact-info .col2 .icon {
+  width: 30px;
+  cursor: pointer;
+  height: 30px;
+  border-radius: 5px;
+  aspect-ratio: 1;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+.contact-container .contact-frame .contact-info .col2 .icon:hover {
+  background-color: var(--text-color);
+  color: var(--highlighter);
+}
+
+.contact-container .form-title span {
+  color: var(--highlighter);
+}
+.contact-container .form-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+.contact-container .form-container form {
+  padding: 30px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.contact-container .form-container form label {
+  width: 45%;
+}
+.contact-container .form-container form input {
+  gap: 20px;
+  width: 50%;
+  height: 50px;
+  border-radius: 33px;
+  padding: 30px;
+  color: var(--text-color);
+  font-size: 20px;
+  background: transparent;
+}
+.contact-container .form-container form input::placeholder,
+.contact-container .form-container form textarea::placeholder {
+  color: var(--text-color);
+}
+.contact-container .form-container form textarea {
+  background: transparent;
+  font-size: 20px;
+  font-size: 20px;
+  gap: 20px;
+  width: 50%;
+  border-radius: 33px;
+  padding: 30px;
+  color: var(--text-color);
+}
+.contact-container .form-container form button {
+  font-weight: 800;
+  width: 200px;
+  height: 50px;
+  border-radius: 33px;
+  cursor: pointer;
+  background-color: var(--highlighter);
+  color: var(--text-color);
+  transition: 0.5s;
+}
+.contact-container .form-container form button:hover {
+  width: 220px;
+}
+@media (max-width: 850px) {
+  .contact-container .title {
+    gap: 10px;
+  }
+  .contact-container .title .title1 {
+    color: var(--text-color);
+    font-size: 30px;
+  }
+  .contact-container .title .title2 {
+    color: var(--highlighter);
+    font-size: 30px;
+  }
+  .contact-container .contact-frame {
+    flex-direction: column;
+  }
+  .contact-container .contact-frame .contact-info {
+    flex-direction: column;
+  }
+  .contact-container .contact-frame .contact-info .col1 {
+    width: 100%;
+    overflow-y: scroll;
+  }
+  .contact-container h1 {
+    font-size: 30px;
+  }
+  .contact-container .contact-frame .contact-info .col2 {
+    margin-top: 30px;
+    padding-left: 20px;
+    width: 100%;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin-bottom: 50px;
+  }
+  .contact-container .form-container form {
+    width: 100%;
+  }
+  .contact-container .form-container form label {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .contact-container .form-container form input {
+    width: 100%;
+    color: var(--text-color);
+  }
+  .contact-container .form-container form textarea {
+    width: 100%;
+    color: var(--text-color);
+  }
+}
