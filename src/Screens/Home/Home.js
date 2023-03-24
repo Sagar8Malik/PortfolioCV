@@ -12,7 +12,7 @@ const Home = () => {
   return (
     <>
       <Helmet>
-        <title>Tushar Pethkar's Portfolio</title>
+        <title>{selfInfo.name}'s Portfolio</title>
       </Helmet>
       <div className="home-container">
         <div className="frame-container">
