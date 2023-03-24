@@ -31,7 +31,7 @@ const info = {
       title: "Portfolio CV",
       time: "March 2023",
       technologies: ["React.js", "JavaScript", "HTML", "CSS"],
-      // link: "https://tushar-pethkar-portfolio1.netlify.app/",
+      link_github: "https://github.com/Sagar8Malik/PortfolioCV",
     },
   ],
   skills: [
